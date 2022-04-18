@@ -1,6 +1,7 @@
 # ImageChatBubbleApp
 
-RoundedCornerShape 가 적용된 카카오톡 묶음 이미지 말풍선 compose ui 구현 
+RoundedCornerShape 가 적용된 카카오톡 묶음 이미지 말풍선 compose ui 구현
+"Development of Kakao Talk Bundle Image with Compose ui RoundedCorner Shape"
 
 ## Overview
 
