@@ -12,9 +12,28 @@
 - 2장, 4장 묶음 일 경우 -> height = 124.dp, width = 250.dp  
 - 3장, 5~N장 묶음 일 경우 -> height = 80.dp, width = 250.dp 
 
+## Preview
 
 https://user-images.githubusercontent.com/59822833/163770894-5700fa74-4d01-4cf4-a0a5-d6800e387d9b.mp4
 
+## Usage
+
+Step1.Add the JitPack repository to your build file
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+   
+Step2. Add the dependency   
+
+	dependencies {
+	        implementation 'com.github.olivia-soy:ImageChatBubbleApp:Tag'
+	}
+  
+  
 
 ## Description
 
