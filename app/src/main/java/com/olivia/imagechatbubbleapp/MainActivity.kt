@@ -1,6 +1,5 @@
 package com.olivia.imagechatbubbleapp
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.olivia.imagechatbubbleapp.ui.theme.ImageChatBubbleAppTheme
@@ -33,15 +31,15 @@ class MainActivity : ComponentActivity() {
                     "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg",
                     "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg"
                 )
-                // A surface container using the 'background' color from the theme
                 Column(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize().padding(10.dp)
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     Column(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalAlignment = Alignment.Start
+                        horizontalAlignment = Alignment.Start,
+                        verticalArrangement = Arrangement.spacedBy(5.dp)
                     ) {
                         ImageChatBubble(
                             images = listOf(
@@ -58,14 +56,38 @@ class MainActivity : ComponentActivity() {
                                 imageList.random(), imageList.random(), imageList.random()
                             )
                         ) {}
+
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(),
+                                imageList.random(),
+                                imageList.random(),
+                                imageList.random()
+                            )
+                        ) {}
+
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(),
+                                imageList.random()
+                            )
+                        ) {}
                     }
 
                     Column(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalAlignment = Alignment.End
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.spacedBy(5.dp)
                     ) {
                         ImageChatBubble(
                             images = listOf(
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
                                 imageList.random(), imageList.random(), imageList.random()
                             )
                         ) {}
@@ -303,12 +325,3 @@ private const val BIG_RADIUS = 20
 private const val SMALL_HEIGHT = 80
 private const val BIG_HEIGHT = 124
 private const val MAX_WIDTH = 250
-
-@Preview("light theme", uiMode = Configuration.UI_MODE_NIGHT_NO)
-@Preview("dark theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
-@Composable
-private fun BubbleTextOnlyListSectionPreview() {
-    ImageChatBubbleAppTheme {
-
-    }
-}
