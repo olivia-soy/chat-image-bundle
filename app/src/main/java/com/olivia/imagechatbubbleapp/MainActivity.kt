@@ -1,12 +1,16 @@
 package com.olivia.imagechatbubbleapp
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -20,54 +24,67 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ImageChatBubbleAppTheme {
+                val imageList = listOf(
+                    "https://cdn.pixabay.com/photo/2017/02/15/13/40/tulips-2068692_1280.jpg",
+                    "https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733_1280.jpg",
+                    "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg",
+                    "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg",
+                    "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg"
+                )
                 // A surface container using the 'background' color from the theme
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize()
+                        .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    ImageChatBubble(
-                        images = listOf(
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg"
-                        )
-                    ) {}
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.Start
+                    ) {
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random()
+                            )
+                        ) {}
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random()
+                            )
+                        ) {}
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random(), imageList.random()
+                            )
+                        ) {}
+                    }
 
-                    ImageChatBubble(
-                        images = listOf(
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg"
-                        )
-                    ) {}
-
-                    ImageChatBubble(
-                        images = listOf(
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg"
-                        )
-                    ) {}
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.End
+                    ) {
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random(), imageList.random()
+                            )
+                        ) {}
 
 
-                    ImageChatBubble(
-                        images = listOf(
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg"
-                        )
-                    ) {}
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random()
+                            )
+                        ) {}
 
-                    ImageChatBubble(
-                        images = listOf(
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg",
-                            "https://cdn.pixabay.com/photo/2022/01/30/05/59/couple-6979921_1280.jpg"
-                        )
-                    ) {}
+                        ImageChatBubble(
+                            images = listOf(
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random(), imageList.random(),
+                                imageList.random(), imageList.random()
+                            )
+                        ) {}
+                    }
                 }
             }
         }
@@ -275,3 +292,12 @@ private const val BIG_RADIUS = 20
 private const val SMALL_HEIGHT = 80
 private const val BIG_HEIGHT = 124
 private const val MAX_WIDTH = 250
+
+@Preview("light theme", uiMode = Configuration.UI_MODE_NIGHT_NO)
+@Preview("dark theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+private fun BubbleTextOnlyListSectionPreview() {
+    ImageChatBubbleAppTheme {
+
+    }
+}
