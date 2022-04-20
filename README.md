@@ -20,6 +20,8 @@ https://user-images.githubusercontent.com/59822833/163770894-5700fa74-4d01-4cf4-
 
 Step1.Add the JitPack repository to your build file
 
+a. Arctic Fox 이전 버전 (root: build.gradle)
+
 	allprojects {
 		repositories {
 			...
@@ -27,6 +29,18 @@ Step1.Add the JitPack repository to your build file
 		}
 	}
    
+a. Arctic Fox 이후 버전  (setting.gradle)  
+   
+   	dependencyResolutionManagement { 
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories { 
+			google() 
+			mavenCentral()
+			maven { url "https://jitpack.io" }
+		} 
+	}
+
+	
 Step2. Add the dependency   
 
 	dependencies {
