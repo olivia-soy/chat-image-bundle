@@ -1,3 +1,6 @@
+![reversal](https://capsule-render.vercel.app/api?type=slice&reversal=false&color=gradient)
+
+
 # ChatImageBundle
 
 - RoundedCornerShape 가 적용된 카카오톡 묶음 이미지 말풍선 compose ui 구현
