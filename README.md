@@ -34,8 +34,7 @@ a. Arctic Fox 이후 버전  (setting.gradle)
    	dependencyResolutionManagement { 
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 		repositories { 
-			google() 
-			mavenCentral()
+			...
 			maven { url "https://jitpack.io" }
 		} 
 	}
