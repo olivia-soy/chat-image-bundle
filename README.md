@@ -1,4 +1,4 @@
-# ImageChatBubbleApp
+# ChatImageBundle
 
 - RoundedCornerShape 가 적용된 카카오톡 묶음 이미지 말풍선 compose ui 구현
 - Development of Kakao Talk Bundle Image with Compose ui RoundedCorner Shape
@@ -30,7 +30,7 @@ Step1.Add the JitPack repository to your build file
 Step2. Add the dependency   
 
 	dependencies {
-	        implementation 'com.github.olivia-soy:ImageChatBubbleApp:Tag'
+	        implementation 'com.github.olivia-soy:ImageChatBubbleApp:1.0.3'
 	}
   
   
