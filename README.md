@@ -1,4 +1,4 @@
-# ImageChatBubbleApp
+# ChatImageBundle
 
 - RoundedCornerShape 가 적용된 카카오톡 묶음 이미지 말풍선 compose ui 구현
 - Development of Kakao Talk Bundle Image with Compose ui RoundedCorner Shape
@@ -20,6 +20,8 @@ https://user-images.githubusercontent.com/59822833/163770894-5700fa74-4d01-4cf4-
 
 Step1.Add the JitPack repository to your build file
 
+a. Arctic Fox 이전 버전 (root: build.gradle)
+
 	allprojects {
 		repositories {
 			...
@@ -27,10 +29,21 @@ Step1.Add the JitPack repository to your build file
 		}
 	}
    
+a. Arctic Fox 이후 버전  (setting.gradle)  
+   
+   	dependencyResolutionManagement { 
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories { 
+			...
+			maven { url "https://jitpack.io" }
+		} 
+	}
+
+	
 Step2. Add the dependency   
 
 	dependencies {
-	        implementation 'com.github.olivia-soy:ImageChatBubbleApp:Tag'
+	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.3'
 	}
   
   
