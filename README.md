@@ -30,7 +30,7 @@ Step1.Add the JitPack repository to your build file
 Step2. Add the dependency   
 
 	dependencies {
-	        implementation 'com.github.olivia-soy:ImageChatBubbleApp:1.0.3'
+	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.3'
 	}
   
   
