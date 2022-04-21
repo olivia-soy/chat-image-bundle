@@ -34,22 +34,28 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.Start,
                         verticalArrangement = Arrangement.spacedBy(5.dp)
                     ) {
+                        //show one image
                         ImageBundle(
                             images = listOf(
                                 imageList.random()
                             )
                         ) {}
+
+                        //show two images
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random()
                             )
                         ) {}
+
+                        //show three images
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random(), imageList.random()
                             )
                         ) {}
 
+                        //show four images
                         ImageBundle(
                             images = listOf(
                                 imageList.random(),
@@ -59,6 +65,7 @@ class MainActivity : ComponentActivity() {
                             )
                         ) {}
 
+                        //show five images
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random(),
@@ -73,6 +80,7 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.End,
                         verticalArrangement = Arrangement.spacedBy(5.dp)
                     ) {
+                        //show a lot of images
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random(), imageList.random(),
@@ -84,15 +92,12 @@ class MainActivity : ComponentActivity() {
                                 imageList.random(), imageList.random(), imageList.random()
                             )
                         ) {}
-
-
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random(), imageList.random(),
                                 imageList.random(), imageList.random(), imageList.random()
                             )
                         ) {}
-
                         ImageBundle(
                             images = listOf(
                                 imageList.random(), imageList.random(), imageList.random(),
@@ -103,7 +108,6 @@ class MainActivity : ComponentActivity() {
                         ) {}
                     }
                 }
-
             }
         }
     }
