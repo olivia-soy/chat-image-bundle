@@ -14,11 +14,18 @@ import coil.compose.AsyncImage
 
 /**
  * # Image Bundle Library
- * #
  * @author LEESOYOUNG
  * @since 2022-04-18
  */
 
+
+/**
+ * # ImageBundle
+ *
+ * @param modifier      ImageBundle modifier
+ * @param images        ImageBundle imageUrl List
+ * @param onClickItem   ImageBundle onClick listener
+ */
 @Composable
 fun ImageBundle(
     modifier: Modifier = Modifier,
@@ -44,6 +51,7 @@ fun ImageBundle(
     } else {
         val sectionCount = getImageSectionCount(images.size)
         val imageSections = getImageSections(images, sectionCount)
+
         //2장, 4장 섹션일 경우 height 값 BIG_HEIGHT 아닐 경우 height 값 SMALL_HEIGHT
         val height = if (imageSections.first().size == 2) BIG_HEIGHT.dp else SMALL_HEIGHT.dp
         val space = 2.dp
@@ -75,6 +83,14 @@ fun ImageBundle(
     }
 }
 
+/**
+ * AsyncImage Composable
+ *
+ * @param modifier              AsyncImage modifier
+ * @param onClick               AsyncImage onClick listener
+ * @param imageUrl               AsyncImage model
+ * @param contentDescription    AsyncImage contentDescription
+ */
 @Composable
 private fun ImageSection(
     modifier: Modifier = Modifier,
@@ -96,8 +112,8 @@ private fun ImageSection(
 /**
  * row 의 RoundedCornerShape 값 계산
  *
- * @param index 현재 아이템 index 값
- * @param listSize 전체 리스트 사이즈
+ * @param index     현재 아이템 index 값
+ * @param listSize  전체 리스트 사이즈
  * @return RoundedCornerShape
  */
 private fun setRoundedCornerShape(index: Int, listSize: Int): RoundedCornerShape = when {
