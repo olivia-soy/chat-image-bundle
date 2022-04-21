@@ -17,7 +17,17 @@
 
 ## Preview
 
-https://user-images.githubusercontent.com/59822833/163770894-5700fa74-4d01-4cf4-a0a5-d6800e387d9b.mp4
+|이미지 갯수|표시 화면|
+|---|---|
+|1장|<img src="https://user-images.githubusercontent.com/59822833/164371127-afbba604-1c2b-44a0-ba3c-e7f31ad91d36.jpg" width="200" height="200"/>|
+|2장|<img src="https://user-images.githubusercontent.com/59822833/164371729-42ca3846-4946-423f-8c2a-6baf72f883de.jpg" width="200" height="200"/>|
+|3장|<img src="https://user-images.githubusercontent.com/59822833/164371738-39619e6f-03ca-4e39-b09f-f5b831ff7db3.jpg" width="200" height="200"/>|
+|4장|<img src="https://user-images.githubusercontent.com/59822833/164371742-705cb4d8-14d8-47dd-983a-f5991679166e.jpg" width="200" height="200"/>|
+
+전체 동영상
+
+https://user-images.githubusercontent.com/59822833/164371968-324edcaa-4d89-4a1e-92f1-29571a751180.mp4
+
 
 ## Usage
 
@@ -49,7 +59,7 @@ Step2. Add the dependency
 	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.3'
 	}
   
-Step3. Use "ImageBundle" Composable [sample](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)
+Step3. Use "ImageBundle" Composable -> Check [sample source](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)
 
 ## Description
 
