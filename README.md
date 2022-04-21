@@ -49,7 +49,7 @@ Step2. Add the dependency
 	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.3'
 	}
   
-  
+Step3. Use "ImageBundle" Composable [sample](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)
 
 ## Description
 
