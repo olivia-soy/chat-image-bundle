@@ -55,7 +55,7 @@ a. Arctic Fox 이후 버전  (setting.gradle)
 Step2. Add the dependency   
 
 	dependencies {
-	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.5'
+	        implementation 'com.github.olivia-soy:ChatImageBundle:1.0.6'
 	}
   
 Step3. Use "ImageBundle" Composable -> Check [sample source](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)

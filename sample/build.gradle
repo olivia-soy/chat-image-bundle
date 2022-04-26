@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.olivia.imagechatbubbleapp"
-        minSdk 21
+        minSdk 23
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -62,5 +62,5 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
     //Add ChatImageBundle dependency
-    implementation 'com.github.olivia-soy:ChatImageBundle:1.0.5'
+    implementation 'com.github.olivia-soy:ChatImageBundle:1.0.6'
 }
