@@ -52,7 +52,7 @@ a. Arctic Fox 이후 버전  (setting.gradle)
 
 	
 Step2. Add the dependency 
-- ✔️ Check [Latest Version](https://jitpack.io/#olivia-soy/chat-image-bundle)
+- ✔️ [Latest Version](https://jitpack.io/#olivia-soy/chat-image-bundle)
 ```
 dependencies {
 	implementation 'com.github.olivia-soy:chat-image-bundle:[Latest Version]'
