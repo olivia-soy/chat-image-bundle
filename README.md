@@ -52,13 +52,16 @@ a. Arctic Fox 이후 버전  (setting.gradle)
 	}
 
 	
-Step2. Add the dependency -> Check Latest Version [https://jitpack.io/olivia-soy/chat-image-bundle](https://jitpack.io/#olivia-soy/chat-image-bundle)
-
-	dependencies {
-	        implementation 'com.github.olivia-soy:chat-image-bundle:1.0.6'
-	}
-  
-Step3. Use "ImageBundle" Composable -> Check [sample source](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)
+Step2. Add the dependency 
+- ✔️ [Latest Version](https://jitpack.io/#olivia-soy/chat-image-bundle)
+```
+dependencies {
+	implementation 'com.github.olivia-soy:chat-image-bundle:1.0.6'
+}
+```
+	
+Step3. Use "ImageBundle" Composable 
+- ✔️ [sample source](sample/src/main/java/com/olivia/imagechatbubbleapp/MainActivity.kt)
 
 ## Description
 
