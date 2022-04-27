@@ -11,7 +11,6 @@
 - 1장 일 경우 -> wrapContent && maxWidth = 250.dp
 - 2장, 4장 묶음 일 경우 -> height = 124.dp, width = 250.dp  
 - 3장, 5~N장 묶음 일 경우 -> height = 80.dp, width = 250.dp 
-- 행에 3개씩 배치하며 
 
 ## Preview
 
